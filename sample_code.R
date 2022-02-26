@@ -1,11 +1,11 @@
-#This code will take takes the win odds from a horse race and defines probability
+#This code will takes the winning odds from a horse race and defines probability
 #density functions for each horse using a Gaussian curve. This is done by finding
 #parameter estimates for the mean of each independent distribution via maximum
 #likelihood mehtods. After this is done generic values are chosen for the win odds
-#and parameter estimates are found. Then to races are simulated and a the winning
+#and parameter estimates are found. Then the races are simulated and the winning
 #horse is recorded and plotted via a bar plot. The plot is animated as each race
-#occurs. Finally the pdf's and bar plots are plotted together showing the means
-#for each horse's pdf and below it the final proportion of times each horse won
+#occurs. Finally the p.d.f's and bar plots are plotted together showing the means
+#for each horse's p.d.f. and at the bottom, the number of times each horse won
 #the race when simulated.
 
 
@@ -15,7 +15,7 @@
 normal.first<-function(winOdds = "", epsilon=""){
     n  <-  length(winOdds)
 
-    #odds_conversion is a function that converts odds to probabilities that I wrote
+    #odds_conversion is a function that converts odds to probabilities
     oD<-winOdds[order(winOdds)]
     probs  <-  (1/(1+oD))/sum(1/(1+oD))
     c  <-  1
